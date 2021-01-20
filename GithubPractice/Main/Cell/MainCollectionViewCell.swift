@@ -19,14 +19,9 @@ class MainCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.layer.cornerRadius = 15.0
-        self.layer.borderWidth = 5.0
-        self.layer.borderColor = UIColor.clear.cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.masksToBounds = true
-        
-        self.contentView.layer.cornerRadius = 15.0
-        self.contentView.layer.borderWidth = 5.0
-        self.contentView.layer.borderColor = UIColor.clear.cgColor
-        self.contentView.layer.masksToBounds = true
         
         avatarImageView.clipsToBounds = true
     }
