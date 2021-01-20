@@ -20,6 +20,9 @@
 		C225D57225B80F39003B127C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D57125B80F39003B127C /* Network.swift */; };
 		C225D57725B81027003B127C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D57625B81027003B127C /* Router.swift */; };
 		C225D57A25B81330003B127C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D57925B81330003B127C /* MainViewModel.swift */; };
+		C225D58125B82569003B127C /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D58025B82569003B127C /* ServiceError.swift */; };
+		C225D58425B82587003B127C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D58325B82587003B127C /* User.swift */; };
+		C225D58825B82F3B003B127C /* MainViewSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D58725B82F3B003B127C /* MainViewSectionModel.swift */; };
 		C23B08C625B800350075CEEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23B08C525B800350075CEEA /* AppDelegate.swift */; };
 		C23B08CF25B800390075CEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23B08CE25B800390075CEEA /* Assets.xcassets */; };
 		C23B08D225B800390075CEEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23B08D025B800390075CEEA /* LaunchScreen.storyboard */; };
@@ -45,6 +48,9 @@
 		C225D57125B80F39003B127C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C225D57625B81027003B127C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C225D57925B81330003B127C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		C225D58025B82569003B127C /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		C225D58325B82587003B127C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C225D58725B82F3B003B127C /* MainViewSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSectionModel.swift; sourceTree = "<group>"; };
 		C23B08C225B800350075CEEA /* GithubPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23B08C525B800350075CEEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C23B08CE25B800390075CEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 			children = (
 				C225D56B25B80EB8003B127C /* MainViewController.swift */,
 				C225D57925B81330003B127C /* MainViewModel.swift */,
+				C225D58725B82F3B003B127C /* MainViewSectionModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 				C225D56E25B80EFA003B127C /* GithubAPI.swift */,
 				C225D57125B80F39003B127C /* Network.swift */,
 				C225D57625B81027003B127C /* Router.swift */,
+				C225D58025B82569003B127C /* ServiceError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 				C225D52925B80C1B003B127C /* ActivityIndicator.swift */,
 				C225D52625B80BF5003B127C /* ErrorTracker.swift */,
 				C225D52F25B80C6B003B127C /* Scene.swift */,
+				C225D58325B82587003B127C /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,8 +309,11 @@
 				C225D52325B80B8C003B127C /* BaseViewModel.swift in Sources */,
 				C23B08C625B800350075CEEA /* AppDelegate.swift in Sources */,
 				C225D53025B80C6B003B127C /* Scene.swift in Sources */,
+				C225D58825B82F3B003B127C /* MainViewSectionModel.swift in Sources */,
 				C225D52025B80B6E003B127C /* BaseViewController.swift in Sources */,
+				C225D58425B82587003B127C /* User.swift in Sources */,
 				C225D57A25B81330003B127C /* MainViewModel.swift in Sources */,
+				C225D58125B82569003B127C /* ServiceError.swift in Sources */,
 				C225D52A25B80C1B003B127C /* ActivityIndicator.swift in Sources */,
 				C225D52725B80BF5003B127C /* ErrorTracker.swift in Sources */,
 				C225D56525B80D55003B127C /* Observable+Operators.swift in Sources */,

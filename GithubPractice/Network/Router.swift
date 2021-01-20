@@ -15,7 +15,7 @@ enum Router {
 extension Router: TargetType {
     
     var baseURL: URL {
-        return URL(string: "https://api.github.com/")!
+        return URL(string: "https://api.github.com")!
     }
     
     var headers: [String : String]? {

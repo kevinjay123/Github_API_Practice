@@ -10,5 +10,5 @@ import RxSwift
 import RxCocoa
 
 protocol GithubAPI {
-    func fetchUser(name: String, page: String) -> Single<()>
+    func fetchUser(name: String, page: String) -> Single<GitHubSearch>
 }

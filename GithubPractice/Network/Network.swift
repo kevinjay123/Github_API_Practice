@@ -11,13 +11,11 @@ import MapKit
 import RxSwift
 import UIKit
 
-struct Network: GithubAPI {
-    private static let disposeBag = DisposeBag()
-
-    static private func request<Element: Codable>(by config: Router) -> Single<Element> {
+struct Network: GithubAPI {    
+    private func request<Element: Codable>(by router: Router) -> Single<Element> {
         return Single.create { (single) -> Disposable in
             let provider = MoyaProvider<Router>()
-            provider.request(config) { (result) in
+            provider.request(router) { (result) in
                 switch result {
                 case .success(let response):
                     do {
@@ -39,9 +37,7 @@ struct Network: GithubAPI {
 }
 
 extension Network {
-    func fetchUser(name: String, page: String) -> Single<()> {
-        return Single.create { (single) -> Disposable in
-            return Disposables.create()
-        }
+    func fetchUser(name: String, page: String) -> Single<GitHubSearch> {
+        return request(by: Router.user(name: name, page: page))
     }
 }
