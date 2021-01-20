@@ -11,7 +11,6 @@ import RxCocoa
 
 class MainViewModel: BaseViewModel, ViewModelType {
     struct Input {
-        let textInputTrigger: TextInput<UITextField>
         let reachedBottomTrigger: Observable<Void>
     }
     
@@ -28,38 +27,6 @@ class MainViewModel: BaseViewModel, ViewModelType {
     var page = 1
     
     func transform(input: Input) -> Output {
-        
-        
-        
-//        let textInput = input.textInputTrigger
-//        _ = textInput <-> searchText
-//
-//        searchText.asObservable()
-//            .throttle(.milliseconds(1000), latest: true, scheduler: MainScheduler.instance)
-//            .subscribe(onNext: { [weak self] text in
-//                guard let self = self else { return }
-//
-//                currentUsers.removeAll()
-//                page = 1
-//
-//                if !text.isEmpty {
-//                    self.network.fetchUser(name: text, page: String(page))
-//                        .trackActivity(self.loading)
-//                        .trackError(self.error)
-//                        .subscribe(onNext: { [weak self] data in
-//                            guard let self = self else { return }
-//
-//                            currentUsers = data.users
-//                            let dataSource = self.genDataSource(by: data.users)
-//                            self.sectionModels.accept(dataSource)
-//                        })
-//                        .disposed(by: self.rx.disposeBag)
-//                } else {
-//                    let dataSource = self.genDataSource(by: currentUsers)
-//                    self.sectionModels.accept(dataSource)
-//                }
-//            })
-//            .disposed(by: rx.disposeBag)
         
         let reachedBottomTriggered = input.reachedBottomTrigger
         reachedBottomTriggered
@@ -104,9 +71,9 @@ class MainViewModel: BaseViewModel, ViewModelType {
         self.text = text
         
         if !text.isEmpty {
-            self.network.fetchUser(name: text, page: String(page))
-                .trackActivity(self.loading)
-                .trackError(self.error)
+            network.fetchUser(name: text, page: String(page))
+                .trackActivity(loading)
+                .trackError(error)
                 .subscribe(onNext: { [weak self] data in
                     guard let self = self else { return }
                     
@@ -114,10 +81,10 @@ class MainViewModel: BaseViewModel, ViewModelType {
                     let dataSource = self.genDataSource(by: data.users)
                     self.sectionModels.accept(dataSource)
                 })
-                .disposed(by: self.rx.disposeBag)
+                .disposed(by: rx.disposeBag)
         } else {
-            let dataSource = self.genDataSource(by: currentUsers)
-            self.sectionModels.accept(dataSource)
+            let dataSource = genDataSource(by: currentUsers)
+            sectionModels.accept(dataSource)
         }
     }
 }

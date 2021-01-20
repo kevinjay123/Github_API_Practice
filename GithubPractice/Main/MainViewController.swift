@@ -81,8 +81,7 @@ class MainViewController: BaseViewController {
             return
         }
 
-        let input = MainViewModel.Input(textInputTrigger: textField.rx.textInput,
-                                        reachedBottomTrigger: collectionView.rx.reachedBottom.mapToVoid())
+        let input = MainViewModel.Input(reachedBottomTrigger: collectionView.rx.reachedBottom.mapToVoid())
         let output = viewModel.transform(input: input)
         
         output.sectionModels
