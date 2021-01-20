@@ -17,7 +17,10 @@ struct GitHubSearch: Codable {
     }
 }
 
-struct User: Codable {
+struct User: Codable, Hashable {
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     var id: Int = 0
     var nodeId: String = ""

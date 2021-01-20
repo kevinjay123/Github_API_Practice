@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /// IQKeyboardManager Settings
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Done"
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = NSLocalizedString("UI.Done", comment: "UI.Done")
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .white
