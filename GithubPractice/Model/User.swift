@@ -9,9 +9,9 @@ import Foundation
 
 struct GitHubSearch: Codable {
     var users: [User] = []
-    
+
     init() {}
-    
+
     enum CodingKeys: String, CodingKey {
         case users = "items"
     }
@@ -21,14 +21,14 @@ struct User: Codable, Hashable {
     static func == (lhs: User, rhs: User) -> Bool {
         return lhs.id == rhs.id
     }
-    
+
     var id: Int = 0
     var nodeId: String = ""
     var avatarUrlString: String = ""
     var name: String = ""
-    
+
     init() {}
-    
+
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case nodeId = "node_id"

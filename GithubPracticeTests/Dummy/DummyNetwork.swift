@@ -6,33 +6,32 @@
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
+import RxSwift
 
 @testable import GithubPractice
 
 class DummyNetwork: GitHubAPI {
     func fetchUser(name: String, page: String) -> Single<GitHubSearch> {
         return Single.create { (single) -> Disposable in
-            
+
             if !name.isEmpty, let pageCount = Int(page) {
-                
                 var search = GitHubSearch()
                 var user = User()
-                
+
                 if pageCount > 1 {
                     user.avatarUrlString = "www.apple.com"
                     user.name = "Tim"
                     user.id = 2
                     user.nodeId = "Test2"
                     search.users.append(user)
-                    
+
                     user.avatarUrlString = "www.youtube.com"
                     user.name = "Lu"
                     user.id = 3
                     user.nodeId = "Test3"
                     search.users.append(user)
-                    
+
                 } else {
                     user.avatarUrlString = "www.google.com"
                     user.name = "Kevin"
@@ -45,7 +44,7 @@ class DummyNetwork: GitHubAPI {
             } else {
                 single(.error(ServiceError.data))
             }
-            
+
             return Disposables.create()
         }
     }

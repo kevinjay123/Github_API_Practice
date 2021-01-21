@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
+import RxSwift
 
 protocol GitHubAPI {
     func fetchUser(name: String, page: String) -> Single<GitHubSearch>

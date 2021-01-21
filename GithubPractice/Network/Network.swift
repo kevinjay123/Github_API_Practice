@@ -6,18 +6,18 @@
 //
 
 import Alamofire
-import Moya
 import MapKit
+import Moya
 import RxSwift
 import UIKit
 
-struct Network: GitHubAPI {    
+struct Network: GitHubAPI {
     private func request<Element: Codable>(by router: Router) -> Single<Element> {
         return Single.create { (single) -> Disposable in
             let provider = MoyaProvider<Router>()
-            provider.request(router) { (result) in
+            provider.request(router) { result in
                 switch result {
-                case .success(let response):
+                case let .success(response):
                     do {
                         let decoder = JSONDecoder()
                         let item = try decoder.decode(Element.self, from: response.data)
@@ -26,7 +26,7 @@ struct Network: GitHubAPI {
                         single(.error(error))
                     }
 
-                case .failure(let error):
+                case let .failure(error):
                     single(.error(error))
                 }
             }

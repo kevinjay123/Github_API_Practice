@@ -17,7 +17,6 @@ enum MainSectionItem {
 }
 
 extension MainSectionModel: SectionModelType {
-    
     typealias Item = MainSectionItem
 
     init(original: MainSectionModel, items: [MainSectionItem]) {

@@ -5,13 +5,12 @@
 //  Created by Kevin Chan on 2021/1/20.
 //
 
-import UIKit
-import RxSwift
-import RxCocoa
 import MBProgressHUD
+import RxCocoa
+import RxSwift
+import UIKit
 
 class BaseViewController: UIViewController, Navigatable {
-
     var viewModel: BaseViewModel?
     var navigator: Navigator!
 
@@ -26,7 +25,7 @@ class BaseViewController: UIViewController, Navigatable {
     required init?(coder aDecoder: NSCoder) {
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     let isLoading = BehaviorRelay(value: false)
     let error = PublishRelay<Error>()
 
@@ -38,11 +37,9 @@ class BaseViewController: UIViewController, Navigatable {
     }
 
     func setUI() {
-        
     }
 
     func bindViewModel() {
-
     }
 }
 
@@ -67,4 +64,3 @@ extension BaseViewController {
         }
     }
 }
-

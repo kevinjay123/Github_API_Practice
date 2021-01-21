@@ -16,14 +16,13 @@ protocol ViewModelType {
 }
 
 class BaseViewModel: NSObject {
-    
     let loading = ActivityIndicator()
 
     let error = ErrorTracker()
     let parsedError = PublishSubject<Error>()
 
     let network: GitHubAPI
-    
+
     init(network: GitHubAPI) {
         self.network = network
         super.init()
