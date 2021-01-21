@@ -14,6 +14,17 @@ class MainCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var userNameLabel: UILabel!
 
+    private var user: User? {
+        didSet {
+            if let user = user {
+                let url = URL(string: user.avatarUrlString)
+
+                avatarImageView.kf.setImage(with: url)
+                userNameLabel.text = user.name
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -23,6 +34,10 @@ class MainCollectionViewCell: UICollectionViewCell {
         layer.masksToBounds = true
 
         avatarImageView.clipsToBounds = true
+    }
+    
+    func bind(for user: User) {
+        self.user = user
     }
 
     override func prepareForReuse() {

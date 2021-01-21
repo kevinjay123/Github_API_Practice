@@ -47,7 +47,7 @@ class MainViewController: BaseViewController {
         let nib = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "mainCell")
 
-        let stackView = UIStackView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0))
+        let stackView = UIStackView(frame: CGRect.zero)
         stackView.addArrangedSubview(textField)
         stackView.addArrangedSubview(collectionView)
 
@@ -113,8 +113,14 @@ class MainViewController: BaseViewController {
 
         error
             .subscribe(onNext: { [weak self] error in
-                let alerVC = UIAlertController(title: error.localizedDescription, message: nil, preferredStyle: .alert)
-                alerVC.addAction(.init(title: NSLocalizedString("UI.OK", comment: "UI.OK"), style: .default, handler: nil))
+                let alerVC = UIAlertController(title: error.localizedDescription,
+                                               message: nil,
+                                               preferredStyle: .alert)
+                
+                alerVC.addAction(.init(title: NSLocalizedString("UI.OK", comment: "UI.OK"),
+                                       style: .default,
+                                       handler: nil))
+                
                 self?.present(alerVC, animated: true, completion: nil)
             })
             .disposed(by: rx.disposeBag)
@@ -125,11 +131,8 @@ class MainViewController: BaseViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! MainCollectionViewCell
 
             switch dataSource[indexPath] {
-            case let .list(item):
-                let url = URL(string: item.avatarUrlString)
-
-                cell.avatarImageView.kf.setImage(with: url)
-                cell.userNameLabel.text = item.name
+            case let .list(user):
+                cell.bind(for: user)
             }
 
             return cell
@@ -139,7 +142,7 @@ class MainViewController: BaseViewController {
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     fileprivate var sectionInsets: UIEdgeInsets {
-        return UIEdgeInsets(top: 16.0, left: 0.0, bottom: 16.0, right: 0.0)
+        return UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
     }
 
     fileprivate var itemsPerRow: CGFloat {
