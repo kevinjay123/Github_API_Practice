@@ -10,8 +10,13 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - Nimble (8.1.2)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
+  - Quick (3.0.0)
+  - RxAtomic (4.4.2)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -35,7 +40,11 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - MBProgressHUD (~> 1.2.0)
   - Moya (~> 14.0)
+  - Nimble (~> 8.0)
   - "NSObject+Rx"
+  - Quick (~> 3.0)
+  - RxAtomic
+  - RxBlocking
   - RxCocoa (< 6.0.0)
   - RxDataSources (< 5.0)
   - RxGesture
@@ -51,7 +60,11 @@ SPEC REPOS:
     - Kingfisher
     - MBProgressHUD
     - Moya
+    - Nimble
     - "NSObject+Rx"
+    - Quick
+    - RxAtomic
+    - RxBlocking
     - RxCocoa
     - RxDataSources
     - RxGesture
@@ -67,7 +80,11 @@ SPEC CHECKSUMS:
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Nimble: 3864815b4703c7ebffba875973c70e854489fbae
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
@@ -76,6 +93,6 @@ SPEC CHECKSUMS:
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: acb8052f9f61f67225d67969b10e8635475fde5a
+PODFILE CHECKSUM: bce9e986d0eb1f1fd69452d4b8602a115b1e3930
 
 COCOAPODS: 1.10.1

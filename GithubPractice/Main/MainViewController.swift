@@ -14,7 +14,7 @@ import Kingfisher
 
 class MainViewController: BaseViewController {
     
-    private lazy var textField: UITextField = {
+    private var textField: UITextField = {
         let textField = UITextField(frame: CGRect.zero)
         return textField
     }()
@@ -52,7 +52,7 @@ class MainViewController: BaseViewController {
         stackView.addArrangedSubview(textField)
         stackView.addArrangedSubview(collectionView)
 
-        stackView.spacing = 2.0
+        stackView.spacing = 1.0
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .fill
