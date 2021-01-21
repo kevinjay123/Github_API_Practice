@@ -61,7 +61,7 @@ class MainViewController: BaseViewController {
                 
         stackView.snp.makeConstraints { (make) in
             make.top.equalTo(view.snp_topMargin)
-            make.bottom.equalTo(view.snp_bottomMargin)
+            make.bottom.equalTo(view.snp.bottom)
             make.leading.equalTo(view.snp.leading)
             make.trailing.equalTo(view.snp.trailing)
         }
