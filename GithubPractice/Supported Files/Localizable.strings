@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  GithubPractice
+
+  Created by Kevin Chan on 2021/1/21.
+  
+*/
+
+"UI.Total" = "全部";
+"UI.OK" = "確定";
+"UI.Cancel" = "取消";
+"UI.Close" = "關閉";
+"UI.Loading" = "讀取中";
+"UI.LoggingOut" = "登出中";
+"UI.Processing" = "處理中";
+"UI.Done" = "完成";
+"UI.Failed" = "失敗";
+"UI.NoData" = "無資料";
+"UI.Selection" = "選擇";
+"UI.Delete" = "刪除";
+"UI.DeleteAll" = "刪除全部";
+"UI.Setting" = "設定";
+"UI.Address" = "地址：";
+"UI.Distance" = "距離：%0.2f 公里";
+"UI.Phone" = "電話";
+"UI.Next" = "下一步";
+"UI.Logout" = "登出";
+
+"Main.TextField.Placeholder.Text" = "請輸入名稱";

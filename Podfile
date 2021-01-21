@@ -19,4 +19,13 @@ target 'GithubPractice' do
   pod "RxGesture"
   pod 'RxViewController'
 
+  target 'GithubPracticeTests' do
+      inherit! :search_paths
+      
+      # Pods for testing
+      pod 'Quick', '~> 3.0'
+      pod 'Nimble', '~> 8.0'
+      pod 'RxAtomic', :modular_headers => true
+      pod 'RxBlocking'
+  end
 end
