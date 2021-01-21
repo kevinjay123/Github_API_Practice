@@ -13,7 +13,7 @@ Sample for Github API with programmatically UI
 ## Frameworks
 
 * [Moya](https://github.com/Moya/Moya)
-* [RxSwift](https://github.com/ReactiveX/RxSwift) - Included some relate frameworks, like [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources), [RxOptional](https://github.com/RxSwiftCommunity/RxOptional), [RxViewController](https://github.com/devxoul/RxViewController), etc...
+* [RxSwift](https://github.com/ReactiveX/RxSwift) - Included some relate frameworks, like [RxDataSources](https://github.com/RxSwiftCommunity/RxDataSources),  [RxViewController](https://github.com/devxoul/RxViewController), etc...
 * [Kingfisher](https://github.com/onevcat/Kingfisher)
 * [MBProgressHUD](https://github.com/jdg/MBProgressHUD)
 * [Quick](https://github.com/Quick/Quick)
