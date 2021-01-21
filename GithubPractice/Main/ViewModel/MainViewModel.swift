@@ -18,10 +18,8 @@ class MainViewModel: BaseViewModel, ViewModelType {
         let sectionModels: Observable<[MainSectionModel]>
     }
 
-    private var text: String = ""
+    private var searchText: String = ""
     private let sectionModels = BehaviorRelay<[MainSectionModel]>(value: [])
-
-    private let searchText = BehaviorRelay<String>(value: "")
 
     var currentUsers: [User] = []
     var page = 1
@@ -36,7 +34,7 @@ class MainViewModel: BaseViewModel, ViewModelType {
 
                 self.page += 1
 
-                return self.network.fetchUser(name: self.text, page: String(self.page))
+                return self.network.fetchUser(name: self.searchText, page: String(self.page))
             }
             .subscribe(onNext: { [weak self] data in
                 guard let self = self else { return }
@@ -67,7 +65,7 @@ class MainViewModel: BaseViewModel, ViewModelType {
         currentUsers.removeAll()
         page = 1
 
-        self.text = text
+        searchText = text
 
         if !text.isEmpty {
             network.fetchUser(name: text, page: String(page))
