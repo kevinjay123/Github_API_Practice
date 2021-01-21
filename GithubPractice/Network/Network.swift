@@ -11,7 +11,7 @@ import MapKit
 import RxSwift
 import UIKit
 
-struct Network: GithubAPI {    
+struct Network: GitHubAPI {    
     private func request<Element: Codable>(by router: Router) -> Single<Element> {
         return Single.create { (single) -> Disposable in
             let provider = MoyaProvider<Router>()

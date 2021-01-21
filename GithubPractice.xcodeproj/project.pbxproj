@@ -19,7 +19,7 @@
 		C225D53025B80C6B003B127C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D52F25B80C6B003B127C /* Scene.swift */; };
 		C225D56525B80D55003B127C /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D56425B80D55003B127C /* Observable+Operators.swift */; };
 		C225D56C25B80EB8003B127C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D56B25B80EB8003B127C /* MainViewController.swift */; };
-		C225D56F25B80EFA003B127C /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D56E25B80EFA003B127C /* GithubAPI.swift */; };
+		C225D56F25B80EFA003B127C /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D56E25B80EFA003B127C /* GitHubAPI.swift */; };
 		C225D57225B80F39003B127C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D57125B80F39003B127C /* Network.swift */; };
 		C225D57725B81027003B127C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D57625B81027003B127C /* Router.swift */; };
 		C225D57A25B81330003B127C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225D57925B81330003B127C /* MainViewModel.swift */; };
@@ -66,7 +66,7 @@
 		C225D52F25B80C6B003B127C /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		C225D56425B80D55003B127C /* Observable+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Operators.swift"; sourceTree = "<group>"; };
 		C225D56B25B80EB8003B127C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		C225D56E25B80EFA003B127C /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		C225D56E25B80EFA003B127C /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		C225D57125B80F39003B127C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C225D57625B81027003B127C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C225D57925B81330003B127C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		C225D51125B80AD7003B127C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C225D56E25B80EFA003B127C /* GithubAPI.swift */,
+				C225D56E25B80EFA003B127C /* GitHubAPI.swift */,
 				C225D57125B80F39003B127C /* Network.swift */,
 				C225D57625B81027003B127C /* Router.swift */,
 				C225D58025B82569003B127C /* ServiceError.swift */,
@@ -485,7 +485,7 @@
 				C225D52A25B80C1B003B127C /* ActivityIndicator.swift in Sources */,
 				C225D52725B80BF5003B127C /* ErrorTracker.swift in Sources */,
 				C225D56525B80D55003B127C /* Observable+Operators.swift in Sources */,
-				C225D56F25B80EFA003B127C /* GithubAPI.swift in Sources */,
+				C225D56F25B80EFA003B127C /* GitHubAPI.swift in Sources */,
 				C225D56C25B80EB8003B127C /* MainViewController.swift in Sources */,
 				C225D57725B81027003B127C /* Router.swift in Sources */,
 			);

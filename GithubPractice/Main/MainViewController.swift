@@ -123,7 +123,6 @@ class MainViewController: BaseViewController {
     
     private func genDataSource() -> RxCollectionViewSectionedReloadDataSource<MainSectionModel> {
         return RxCollectionViewSectionedReloadDataSource<MainSectionModel> { (dataSource, collectionView, indexPath, model) -> UICollectionViewCell in
-            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! MainCollectionViewCell
             
             switch dataSource[indexPath] {

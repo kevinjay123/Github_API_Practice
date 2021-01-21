@@ -22,9 +22,9 @@ class BaseViewModel: NSObject {
     let error = ErrorTracker()
     let parsedError = PublishSubject<Error>()
 
-    let network: GithubAPI
+    let network: GitHubAPI
     
-    init(network: GithubAPI) {
+    init(network: GitHubAPI) {
         self.network = network
         super.init()
 

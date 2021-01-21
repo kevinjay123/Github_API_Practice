@@ -11,7 +11,7 @@ import RxCocoa
 
 @testable import GithubPractice
 
-class DummyNetwork: GithubAPI {
+class DummyNetwork: GitHubAPI {
     func fetchUser(name: String, page: String) -> Single<GitHubSearch> {
         return Single.create { (single) -> Disposable in
             

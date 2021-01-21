@@ -18,7 +18,7 @@ class MainViewModelTest: QuickSpec {
         super.spec()
         
         var viewModel: MainViewModel!
-        var dummyNetwork: GithubAPI!
+        var dummyNetwork: GitHubAPI!
         var disposeBag: DisposeBag!
         
         beforeEach {
